@@ -1,0 +1,14 @@
+name: Job summaries
+
+on: push
+
+# GITHUB_STEP_SUMMARY に書き込んだ値はMarkdownとして処理されてジョブページに表示される
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "## Example Title :rocket:" >> "${GITHUB_STEP_SUMMARY}"
+          echo "- first line" >> "${GITHUB_STEP_SUMMARY}"
+          echo "- second line" >> "${GITHUB_STEP_SUMMARY}"
