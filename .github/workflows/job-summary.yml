@@ -2,6 +2,8 @@ name: Job summaries
 
 on: push
 
+# GITHUB_STEP_SUMMARY に書き込んだ値はMarkdownとして処理されてジョブページに表示される
+
 jobs:
   run:
     runs-on: ubuntu-latest
