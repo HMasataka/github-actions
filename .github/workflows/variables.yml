@@ -1,0 +1,11 @@
+name: Valiables
+
+on: push
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    env:
+      USERNAME: ${{ vars.USERNAME }} # コンテキストはシェルコマンドへハードコードせずに環境変数経由で渡す方が良い
+    steps:
+      - run: echo "${USERNAME}" # 環境変数はダブルクォーテーションで囲う
