@@ -17,7 +17,7 @@ jobs:
     needs: [upload]
     steps:
       - run: date > date.txt
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v8
         with:
           name: uploaded
           path: downloaded
